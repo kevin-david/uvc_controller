@@ -13,10 +13,12 @@ CFLAGS=-std=c++17 -O2
 # Set the path to the directory that contains
 # the libuvc directory
 INCLUDE_DIR=/usr/local/include
+#INCLUDE_DIR=/usr/local/Cellar/libuvc/0.0.6/include
 
 # Set the path to the directory that contains
 # the libuvc library
 LIB_DIR=/usr/local/lib
+#LIB_DIR=/usr/local/Cellar/libuvc/0.0.6/lib
 
 build:
 	# A very simple build :-)

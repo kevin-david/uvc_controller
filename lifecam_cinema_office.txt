@@ -1,0 +1,8 @@
+backlight compensation
+2
+brightness
+100
+contrast
+5
+saturation
+65

@@ -40,6 +40,19 @@ void UVCDevice::open()
         return;
     }
 
+  uvc_device_t **list;
+
+  err = uvc_get_device_list(ctx, &list);
+    if (err != 0) {
+        uvc_perror(err, "uvc_get_device_list"); /* couldn't list devices */
+        this->close();
+        return;
+    }
+
+  int cnt = 0;
+  while(list[cnt++]!=NULL);
+  printf("UVC Descriptor list contains %d devices.\n", (cnt-1));
+
     /* Locates the first attached UVC device, stores in dev */
     err = uvc_find_device(
                     ctx, &dev,
